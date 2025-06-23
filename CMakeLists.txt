@@ -3,4 +3,4 @@ project(WikiCrawler)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(WikiCrawler main.cpp)
+add_executable(WikiCrawler src/main.cpp)
