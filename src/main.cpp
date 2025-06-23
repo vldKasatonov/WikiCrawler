@@ -1,14 +1,14 @@
 #include <iostream>
 #include <string>
 
-const std::string wikipediaBaseURL = "https://en.wikipedia.org/wiki/";
+const std::string WIKIPEDIA_BASE_URL = "https://en.wikipedia.org/wiki/";
 
 bool isWikipediaURL(const std::string &url) {
-	return url.starts_with(wikipediaBaseURL);
+	return url.starts_with(WIKIPEDIA_BASE_URL);
 }
 
 std::string parseArticleName(const std::string &url) {
-	return url.substr(wikipediaBaseURL.length());
+	return url.substr(WIKIPEDIA_BASE_URL.length());
 }
 
 int main() {
@@ -20,6 +20,6 @@ int main() {
 		return 1;
 	}
 	std::string articleName = parseArticleName(inputURL);
-	std::cout << "Article name: " << articleName << "\n";
+	// std::cout << "Article name: " << articleName << "\n";
 	return 0;
 }
